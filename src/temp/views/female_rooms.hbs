@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html  >
+<head>
+  <!-- Site made with Mobirise Website Builder v5.6.8, https://mobirise.com -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="generator" content="Mobirise v5.6.8, mobirise.com">
+  <meta name="twitter:card" content="summary_large_image"/>
+  <meta name="twitter:image:src" content="">
+  <meta property="og:image" content="">
+  <meta name="twitter:title" content="rooms">
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+  <link rel="shortcut icon" href="/images/logo.png" type="image/x-icon">
+  <meta name="description" content="">
+  
+  
+  <title>Rooms</title>
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="/bootstrap/css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="/dropdown/css/style.css">
+  <link rel="stylesheet" href="/socicon/css/styles.css">
+  <link rel="stylesheet" href="/theme/css/style.css">
+  <link href="/fonts/style.css" rel="stylesheet">
+  <link rel="preload" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Jost:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i&display=swap"></noscript>
+  <link rel="preload" as="style" href="/mobirise/css/mbr-additional.css"><link rel="stylesheet" href="/mobirise/css/mbr-additional.css" type="text/css">
+  
+  
+  
+  
+</head>
+<body>
+  
+
+<section data-bs-version="5.1" class="form8 cid-t5ZqMQe6Fe" id="form8-1m">
+
+
+
+{{#if Name}}
+    <div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>{{Name}} Hostel</strong>
+            </h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            {{#each room}}
+            <div class="col-lg-4 mx-auto mbr-form" data-form-type="formoid">
+                
+                <form action="/reserve_amina" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                    <div data-for="_id" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                        <input type="hidden" name="roomNumber" data-form-field="_id" class="form-control" value="{{this}}" id="phone-form7-17">
+                    </div>                       
+                    <div class="col-lg-4 col-md-12 col-sm-12 mbr-section-btn align-center">
+                        <button type="submit" class="btn btn-primary display-4">Room {{this}}</button>
+                    </div>
+                </form>
+                
+            </div>
+            {{/each}}
+        </div>
+    </div>
+{{else}}
+<div class="container">
+        <div class="mbr-section-head">
+            <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
+                <strong>{{hostelName}} Hostel</strong>
+            </h3>
+            
+        </div>
+        <div class="row justify-content-center mt-4">
+            {{#each room}}
+            <div class="col-lg-4 mx-auto mbr-form" data-form-type="formoid">
+                
+                <form action="/reserve_khadija" method="POST" class="mbr-form form-with-styler mx-auto" data-form-title="Form Name">
+                    <div data-for="_id" class="col-lg-12 col-md-12 col-sm-12 form-group mb-3">
+                        <input type="hidden" name="roomNumber" data-form-field="_id" class="form-control" value="{{this}}" id="phone-form7-17">
+                    </div>                       
+                    <div class="col-lg-4 col-md-12 col-sm-12 mbr-section-btn align-center">
+                        <button type="submit" class="btn btn-primary display-4">Room {{this}}</button>
+                    </div>
+                </form>
+                
+            </div>
+            {{/each}}
+        </div>
+    </div>
+{{/if}}
+    
+
+</section>
+
+
+  
+</body>
+</html>
