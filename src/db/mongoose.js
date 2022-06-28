@@ -4,7 +4,6 @@ const express = require('express');
 const MongoDBSession = require("connect-mongodb-session")(session);
 
 
-
 // mongoose setup
 mongoose.connect(process.env.MONGODB_URL, {
     useNewUrlParser: true,

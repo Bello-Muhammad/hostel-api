@@ -44,7 +44,7 @@ router.post('/reserve_khadija', hostelController.post_reserveKhadijaHostel)
 
 router.get('/reserve', isAuth, hostelController.get_reserve)
 
-router.get('/student_signup', )
+router.get('/student_signup', hostelController.get_studentDetails)
 
 router.post('/signup', hostelController.post_studentDetails)
 

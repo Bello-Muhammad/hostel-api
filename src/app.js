@@ -4,6 +4,7 @@ require('./db/mongoose')
 const store = require('./db/mongoose')
 const hbs = require('hbs')
 const bodyparser = require('body-parser')
+const compression = require('compression')
 const session = require('express-session')
 const async = require('hbs/lib/async')
 const res = require('express/lib/response')
@@ -29,6 +30,7 @@ hbs.registerPartials(partialPath)
 //setup static directory to serve
 app.use(bodyparser.urlencoded({extended: false}))
 app.use(express.static(assetsPath))
+app.use(compression())
 
 // setting up express session
 app.use(
@@ -47,7 +49,7 @@ app.use(hostelRouter)
 
 
 app.post('/logout', async (req, res) => {
-    console.log(req.body)
+    // console.log(req.body)
     req.session.destroy((err) => {
         if(err) throw err;
         res.redirect('/')

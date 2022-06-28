@@ -56,24 +56,23 @@
                             <input type="text" name="lastName" placeholder="Last Name" data-form-field="lastName" class="form-control" value="" id="lastname-form8-22" required>
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="otherName">
-                            <input type="text" name="otherName" placeholder="Other Name" data-form-field="otherName" class="form-control" value="" id="otherName-form8-22" required>
+                            <input type="text" name="otherName" placeholder="Other Name" data-form-field="otherName" class="form-control" value="" id="otherName-form8-22" >
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="regnumber">
-                            <input type="text" name="regnumber" placeholder="reg. number" data-form-field="regnumber" class="form-control" value="" id="fregnumber-form8-22" required>
+                            <input type="text" name="regnumber" placeholder="reg. number" data-form-field="regnumber" class="form-control" value="" id="regnumber-form8-22" required>
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="level">
-                            <input type="text" name="level" placeholder="level" data-form-field="level" class="form-control" value="" id="level-form8-22">
+                            <input type="text" name="level" placeholder="level" data-form-field="level" class="form-control" value="" id="level-form8-22" required>
                         </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 form-check form-check-inline mb-3" data-for="gender">
-                            <input type="radio" name="gender" placeholder="" data-form-field="gender" class="form-control form-check-input" value="male" id="gender" style="background-color: rgb(110, 175, 239);" required>
-                            <label class="form-check-label" for="gender">male</label>
+                        <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="gender">
+                            <select id="gender-form8-22" name="gender" class="form-control">
+                                <option style="color: green;">(Choose your Gender)</option>
+                                <option value="male">Male</option>
+                                <option value="female">female</option>
+                            </select>
                         </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 form-check form-check-inline mb-3" data-for="gender">
-                            <input type="radio" name="gender" placeholder="" data-form-field="gender" class="form-control form-check-input" value="female" id="gender" style="background-color: rgb(110, 175, 239);" required>
-                            <label class="form-check-label" for="gender">female</label>
-                        </div>
-                        <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="phone number">
-                            <input type="tel" name="phone" placeholder="phone number" data-form-field="phone number" class="form-control" value="" id="phone number-form8-22" required>
+                        <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="tel">
+                            <input type="tel" name="phone" placeholder="phone number" data-form-field="tel" class="form-control" value="" id="tel-form8-22" required>
                         </div>
                         <div class="col-lg-4 col-md-12 col-sm-12 form-group mb-3" data-for="password">
                             <input type="password" name="password" placeholder="password" data-form-field="password" class="form-control" value="" id="password-form8-22" required>
