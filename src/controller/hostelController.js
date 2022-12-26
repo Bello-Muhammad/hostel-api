@@ -624,6 +624,12 @@ const post_studentDetails = async (req, res) => {
     try {
 
         const {firstName, lastName, otherName, regnumber, level, gender, phone, password} = req.body;
+        
+        const checkReg = await User.find({regnumber: regnumber})
+        
+        if(checkReg) {
+            throw Error('Reg.Number Exist')
+        }
 
         const user = new User({
             firstName,
@@ -640,11 +646,8 @@ const post_studentDetails = async (req, res) => {
         res.redirect('/')
         
     } catch (e) {
-        let E = e.keyValue
-        res.render('student_details', {
-            m: "regnumber belong to another user(exist)",
-            e: E.regnumber
-        })
+      
+        res.redirect('/signup', {e: e})
         
     }
     
