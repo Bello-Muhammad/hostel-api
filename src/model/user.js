@@ -22,7 +22,6 @@ const userSchema = new mongoose.Schema({
     },
     regnumber: {
         type: String,
-        unique: true
     },
     level: {
         type: Number,
