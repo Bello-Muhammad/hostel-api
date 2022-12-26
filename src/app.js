@@ -1,7 +1,6 @@
 const path = require('path')
 const express = require("express")
 require('./db/mongoose')
-const store = require('./db/mongoose')
 const hbs = require('hbs')
 const bodyparser = require('body-parser')
 const compression = require('compression')
@@ -39,7 +38,6 @@ app.use(
     cookie: { maxAge: 3600000 },
     resave: false,
     saveUninitialized: false,
-    store: store,
 })
 );
 
