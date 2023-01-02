@@ -625,7 +625,7 @@ const post_studentDetails = async (req, res) => {
 
         const {firstName, lastName, otherName, regnumber, level, gender, phone, password} = req.body;
         
-        const checkReg = await User.find({regnumber: regnumber})
+        const checkReg = await User.findOne({regnumber})
         
         if(checkReg) {
             throw Error('Reg.Number Exist')
@@ -647,7 +647,7 @@ const post_studentDetails = async (req, res) => {
         
     } catch (e) {
       
-        res.redirect('/signup', {e: e})
+        res.redirect('/signup')
         
     }
     
